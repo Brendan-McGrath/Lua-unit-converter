@@ -3,16 +3,15 @@
 
 ### Usage -
 *LUC* is used like any other module in lua 5.1+;
-```
+``` Lua
 luc = require "Lua-unit-converter"
 
 print( "32 Celsius is " .. luc.convertTemperature(32, "C", "F") .. " Fahrenheit")
 print( "1 Megajoule is " .. luc.convertEnergy(1, "Mj", "Btu") .. " British thermal units"
-
 ```
 
 If you're only interested in a single sub-module, you can treat it as returning a fuction, rather than a table,
-```
+``` Lua
 convertTemperature = require "Lua-unit-converter.lucTemperature"
 
 print( "32 Fahrenheit is " .. luaUnitConverter.convertTemperature(32, "F", "R") .. " Rankine"
@@ -31,3 +30,4 @@ print( "32 Fahrenheit is " .. luaUnitConverter.convertTemperature(32, "F", "R") 
     - [ ] Luminosity
 - [ ] Handle compounded units ( such as kg/h -> lb/m )
 - [ ] Handle variety of names for one unit, such as 'Kilogram', 'Kilo Gram', and 'KiLoGrAm' for 'kg'
+- [ ] Collect usage statistics for reference
