@@ -10,24 +10,19 @@ print( "32 Celsius is " .. luc.convertTemperature(32, "C", "F") .. " Fahrenheit"
 print( "1 Megajoule is " .. luc.convertEnergy(1, "Mj", "Btu") .. " British thermal units"
 ```
 
-If you're only interested in a single sub-module, you can treat it as returning a fuction, rather than a table,
-``` Lua
-convertTemperature = require "Lua-unit-converter.lucTemperature"
-
-print( "32 Fahrenheit is " .. luaUnitConverter.convertTemperature(32, "F", "R") .. " Rankine"
-```
-
 
 ### Todo -
  - [ ] Complete Sub-Modules
     - [ ] Mass
     - [ ] Distance
     - [X] Energy
-    - [ ] Power
+    - [X] Power
+		- [ ] Support for logarithmic values such as dBm and dBW
     - [ ] Time
     - [ ] Volume
     - [X] Temperature
     - [ ] Luminosity
-- [ ] Handle compounded units ( such as kg/h -> lb/m )
+- [ ] Allow requiring of individual sub-modules rather than requiring the whole package.
+- [ ] Handle compounded units ( such as kg/h -> lb/m or even W -> j/s )
 - [ ] Handle variety of names for one unit, such as 'Kilogram', 'Kilo Gram', and 'KiLoGrAm' for 'kg'
 - [ ] Collect usage statistics for reference
