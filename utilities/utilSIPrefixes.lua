@@ -1,4 +1,6 @@
-return { -- List of SI prefixes.
+-- Just return a list of possible SI prefixes.
+-- This list can be modified however you like to add or remove prefixes. ( Just ensure they are unique! )
+return {
 	da = 1e1,	-- Deca
 	 h = 1e2,	-- Hecto
 	 k = 1e3,	-- Kilo
