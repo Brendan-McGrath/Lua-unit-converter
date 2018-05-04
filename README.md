@@ -6,8 +6,8 @@
 ``` Lua
 luc = require "Lua-unit-converter"
 luc.include("All") -- Includes all of the modules available. 
-print( "32 Celsius is " .. luc.convertTemperature(32, "C", "F") .. " Fahrenheit") -- Convert celsius to fahrenheit and print results
-print( "1 Megajoule is " .. luc.convertEnergy(1, "Mj", "Btu") .. " British thermal units" -- Convert megajoules to british thermal units and print results
+print( "32 Celsius is " .. luc.convertTemperature(32, "C", "F") .. " Fahrenheit")
+print( "1 Megajoule is " .. luc.convertEnergy(1, "Mj", "Btu") .. " British thermal units"
 ```
 To include any of the modules located in 'luaUnitConverter/modules' independantly, luc.include( "ModuleName" ) can be used. For example,
 ```
@@ -26,26 +26,26 @@ print( "1 Megajoule is " .. luc.convertEnergy(1, "Mj", "Btu") .. " British therm
 ### Available modules and units -
 
 Energy
-	- 'j'   Joule ( Supports SI prefixing, Gj Mj kj.. )
-	- 'Ws'  Watt Second ( Supports SI prefixing, GWs MWs kWs.. )
-	- 'Wh'  Watt Hour ( Supports SI prefixing, GWs MWs kWs.. )
-	- 'Btu' British thermal units
-	- 'cal' calorie
-	- 'Cal' ( kilo ) Calorie
-	- 'eV'  Electron volt
+ - 'j'   Joule ( Supports SI prefixing, Gj Mj kj.. )
+ - 'Ws'  Watt Second ( Supports SI prefixing, GWs MWs kWs.. )
+ - 'Wh'  Watt Hour ( Supports SI prefixing, GWs MWs kWs.. )
+ - 'Btu' British thermal units
+ - 'cal' calorie
+ - 'Cal' ( kilo ) Calorie
+ - 'eV'  Electron volt
 	
 Power
-	- 'W'  Watt ( Supports SI prefixing, GW MW kW.. )
-	- 'hp' Horsepower
+ - 'W'  Watt ( Supports SI prefixing, GW MW kW.. )
+ - 'hp' Horsepower
 
 Temperature
-	- 'K'  Kelvin
-	- 'F'  Fahrenheit
-	- 'C'  Celsius
-	- 'R'  Rankine
-	- 'Re' Reaumur
-	- 'Ro' Romer
-	- 'De' Delisle
+ - 'K'  Kelvin
+ - 'F'  Fahrenheit
+ - 'C'  Celsius
+ - 'R'  Rankine
+ - 'Re' Reaumur
+ - 'Ro' Romer
+ - 'De' Delisle
 
 
 ### Todo -
