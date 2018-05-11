@@ -22,7 +22,9 @@ local _Name = ...
 -- The main bit of code.
 local luaUnitConverter = {}
 
--- Akeep everything local and let GC handle keeping memory consumption low.
+-- To handle names.
+luaUnitConverter["includedUnits"] = {}
+
 do
 
 	-- Utilities that the main file uses. Keeps things tidy and simple.
@@ -35,7 +37,7 @@ do
 		"Energy",
 		"Power"
 	}
-
+	
 	-- Allow users to include all or specific modules in their code.
 	luaUnitConverter["include"] = function( _module )
 
@@ -48,7 +50,9 @@ do
 		end
 
 		for k, subModule in pairs( _module ) do
-			local _moduledata = require ( _Name .. "modules." .. subModule ) -- Info table ( or nil ), Uses default conversion function ( or false ), cutom function ( or nil )
+			local _moduledata = require ( _Name .. ".modules." .. subModule ) -- Info table ( or nil ), Uses default conversion function ( or false ), cutom function ( or nil )
+			
+			luaUnitConverter["includedUnits"][subModule] = _moduledata[4]
 			
 			if _moduledata[2] then
 				-- Applies the default conversion method ( utilities.utilStandardConverter ) to the modules data-tables.
@@ -61,6 +65,17 @@ do
 			end
 		end
 		
+	end
+	
+	-- Allow users to review a list of the units available in a specific module.
+	luaUnitConverter["unitsOf"] = function( _module )
+		
+		if luaUnitConverter["includedUnits"][_module] ~= nil then
+			return luaUnitConverter["includedUnits"][_module]
+		else
+			error( _module .. " has no unit-names table or is not loaded" )
+		end
+	
 	end
 
 end

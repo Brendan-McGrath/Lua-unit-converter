@@ -24,6 +24,16 @@ local tempFrStandard = {
 	De = function( _val ) return ( 373.15 - _val ) * ( 3 / 2 )			end  -- Delisle
 }
 
+local valueNametable = {
+	K = "Kelvin", 
+	F = "Fahrenheit",
+	C = "Celsius", 
+	R = "Rankine",
+	Re = "Reaumur", 
+	Ro = "Romer",
+	De = "Delisle"
+}
+
 local function convertTemperature( _value, _valFrom, _valTo ) -- convertTemperature
 
 	local _isValid = false
@@ -58,4 +68,4 @@ local function convertTemperature( _value, _valFrom, _valTo ) -- convertTemperat
 
 end
 
-return { nil, false, convertTemperature }
+return { nil, false, convertTemperature, valueNametable }

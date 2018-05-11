@@ -9,5 +9,16 @@ local energyTables = {
 	 eV = { 1.6e-19, false }  -- Electron Volt
 }
 
-return { energyTables, true, nil }
+local valueNametable = {
+	j = "Joule", 
+	Ws = "Watt second",
+	Wh = "Watt hour", 
+	boe = "Barrel of oil equivalent",
+	Btu = "British thermal unit", 
+	cal = "calorie",
+	Cal = "Kilo calorie", 
+	eV = "Electron volt"
+}
+
+return { energyTables, true, nil, valueNametable }
 -- Most modules follow this same layout.
