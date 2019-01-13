@@ -6,8 +6,8 @@
 ``` Lua
 luc = require "Lua-unit-converter"
 luc.include("All") -- Includes all of the modules available. 
-print( "32 Celsius is " .. luc.convertTemperature(32, "C", "F") .. " Fahrenheit")
-print( "1 Megajoule is " .. luc.convertEnergy(1, "Mj", "Btu") .. " British thermal units"
+print( "32 Celsius is " .. luc.convertTemperature(32, "C", "F") .. " Fahrenheit" )
+print( "1 Megajoule is " .. luc.convertEnergy(1, "Mj", "Btu") .. " British thermal units" )
 ```
 To include any of the modules located in 'luaUnitConverter/modules' independantly, luc.include( "ModuleName" ) can be used. For example,
 ```
@@ -62,4 +62,3 @@ Temperature
 - [ ] Allow requiring of individual sub-modules rather than requiring the whole package.
 - [ ] Handle compounded units ( such as kg/h -> lb/m or even W -> j/s rather than js as an independant unit )
 - [ ] Handle variety of names for one unit, such as 'Kilogram', 'Kilo Gram', and 'KiLoGrAm' for 'kg'
-- [ ] Collect information regarding memory usage and cpu-time for determining performance
